@@ -12,3 +12,4 @@
 /Users/michalszczepanski/Documents/GitHub/backend/C#/01/obj/Debug/net10.0/01.pdb
 /Users/michalszczepanski/Documents/GitHub/backend/C#/01/obj/Debug/net10.0/01.genruntimeconfig.cache
 /Users/michalszczepanski/Documents/GitHub/backend/C#/01/obj/Debug/net10.0/ref/01.dll
+/Users/michalszczepanski/Documents/GitHub/backend/C#/01/obj/Debug/net10.0/01.sourcelink.json
