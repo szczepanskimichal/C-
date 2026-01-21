@@ -54,39 +54,59 @@
 //   System.Console.WriteLine($"Hello, {name.ToUpper()}!");
 // }
 
-WorkingWithIntegers();
-WorkingWithIntegers();
-ShowTupleExample();
+// WorkingWithIntegers();
+// WorkingWithIntegers();
+// ShowTupleExample();
 
-void WorkingWithIntegers()
+// void WorkingWithIntegers()
+// {
+//     int a = 18;
+//     int b = 6;
+
+//     // addition
+//     int sum = a + b;
+//     System.Console.WriteLine($" {a} + {b} = {sum} ");
+
+//     // subtraction
+//     int difference = a - b;
+//     System.Console.WriteLine($" {a} - {b} = {difference} ");
+
+//     // multiplication
+//     int product = a * b;
+//     System.Console.WriteLine($" {a} * {b} = {product} ");
+
+//     // division
+//     int quotient = a / b;
+//     System.Console.WriteLine($" {a} / {b} = {quotient} ");
+
+//     // modulus
+//     int remainder = 19 % b;
+//     System.Console.WriteLine($" 19 % {b} = {remainder} ");
+// }
+
+// void ShowTupleExample()
+// {
+//     var point = (X: 1, Y: 2);
+//     var slope = (double)point.Y / point.X;
+//     System.Console.WriteLine($"{point} The slope is {slope}");
+// }
+
+var names = new List<string> { "Cziczi", "Bob", "Charlie" };
+
+// names = [..names, "Diana", "Eve"]; 
+
+
+
+foreach(var name in names)
 {
-    int a = 18;
-    int b = 6;
-
-    // addition
-    int sum = a + b;
-    System.Console.WriteLine($" {a} + {b} = {sum} ");
-
-    // subtraction
-    int difference = a - b;
-    System.Console.WriteLine($" {a} - {b} = {difference} ");
-
-    // multiplication
-    int product = a * b;
-    System.Console.WriteLine($" {a} * {b} = {product} ");
-
-    // division
-    int quotient = a / b;
-    System.Console.WriteLine($" {a} / {b} = {quotient} ");
-
-    // modulus
-    int remainder = 19 % b;
-    System.Console.WriteLine($" 19 % {b} = {remainder} ");
+    System.Console.WriteLine($"Hello, {name.ToUpper()}!");
 }
-
-void ShowTupleExample()
-{
-    var point = (X: 1, Y: 2);
-    var slope = (double)point.Y / point.X;
-    System.Console.WriteLine($"{point} The slope is {slope}");
-}
+// names.Add("Diana");
+// names.Add("Eve");
+// names.Remove("Cziczi");
+// names[0] = "Mija";
+// System.Console.WriteLine(names[2]);
+// System.Console.WriteLine(names[0]);
+// System.Console.WriteLine(names[^2]);
+// System.Console.WriteLine(names.Count);
+// System.Console.WriteLine(names.Count - 1);
