@@ -94,7 +94,7 @@
 var names = new List<string> { "Cziczi", "Bob", "Charlie" };
 
 // names = [..names, "Diana", "Eve"]; 
-
+names.Sort();
 
 
 foreach(var name in names)
