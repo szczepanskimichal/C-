@@ -1,112 +1,69 @@
-﻿// // See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
-// string name = "Alice";
-// string greeting = $"Hello, {name}!";
-// Console.WriteLine(greeting);
-// string firstName = "John";
-// string secondName = "      Doe.     ";
-// secondName=secondName.TrimStart();
-// string fullGreeting = $"Hello, {firstName} {secondName.TrimEnd()}!";
-// Console.WriteLine(fullGreeting);
-// Console.WriteLine("hello " + name + " " + secondName);
+﻿Console.WriteLine("Hello, World!");
 
-// int a = 5;
-// int b = 1;
-// // int sum = checked(a + b);
-// // System.Console.WriteLine(sum);
-// int c = a+b;
-// bool test = c > 10;
-// if(test)
-// {
-//   System.Console.WriteLine("Sum is greater than 10");
-// } 
-// else
-// {
-//   System.Console.WriteLine("Sum is 10 or less");
-// }
+var p1 = new Person("John", "Doe", new DateOnly(1990, 1, 1));
+var p2 = new Person("Mia", "Doe", new DateOnly(1990, 1, 2));
+p1.Pets.Add(new Cat("Mija"));
+p1.Pets.Add(new Dog("John"));
+p2.Pets.Add(new Dog("lsdkalsk"));
+p2.Pets.Add(new Cat("Marysia"));
 
-// int conunter = 0;
-// while (conunter < 5)
-// {
-//   conunter++;
-//   System.Console.WriteLine("Counter: " + conunter);
-// }
-
-// for (int i=0; i <5; i++)
-// {
-//   System.Console.WriteLine("Iteration: " + i);
-// }
-
-// for (int row=1; row<11; row++)
-// {
-//   for (char column = 'a'; column < 'k' + 10; column++) 
-//   {
-//     System.Console.Write($"The cell is ({row}, {column}) ");
-    
-//   }
-// }
-// var names = new List<string> { "<name>", "Bob", "Charlie" };
-// names.Add("Diana");
-// names.Add("Eve");
-// names.Remove("<name>");
-// foreach(var name in names)
-// {
-//   System.Console.WriteLine($"Hello, {name.ToUpper()}!");
-// }
-
-// WorkingWithIntegers();
-// WorkingWithIntegers();
-// ShowTupleExample();
-
-// void WorkingWithIntegers()
-// {
-//     int a = 18;
-//     int b = 6;
-
-//     // addition
-//     int sum = a + b;
-//     System.Console.WriteLine($" {a} + {b} = {sum} ");
-
-//     // subtraction
-//     int difference = a - b;
-//     System.Console.WriteLine($" {a} - {b} = {difference} ");
-
-//     // multiplication
-//     int product = a * b;
-//     System.Console.WriteLine($" {a} * {b} = {product} ");
-
-//     // division
-//     int quotient = a / b;
-//     System.Console.WriteLine($" {a} / {b} = {quotient} ");
-
-//     // modulus
-//     int remainder = 19 % b;
-//     System.Console.WriteLine($" 19 % {b} = {remainder} ");
-// }
-
-// void ShowTupleExample()
-// {
-//     var point = (X: 1, Y: 2);
-//     var slope = (double)point.Y / point.X;
-//     System.Console.WriteLine($"{point} The slope is {slope}");
-// }
-
-var names = new List<string> { "Cziczi", "Bob", "Charlie" };
-
-// names = [..names, "Diana", "Eve"]; 
-names.Sort();
-
-
-foreach(var name in names)
+List<Person> people = new() { p1, p2 };
+Console.WriteLine(people.Count);
+foreach (var person in people)
 {
-    System.Console.WriteLine($"Hello, {name.ToUpper()}!");
+    Console.WriteLine($"{person.First} {person.Last} (born {person.BirthDate:yyyy-MM-dd})");
+    if (person.Pets == null || person.Pets.Count == 0)
+    {
+        Console.WriteLine("  No pets");
+        continue;
+    }
+
+    foreach (var pet in person.Pets)
+    {
+        Console.WriteLine($" - {pet.GetType().Name}: {pet.First} => {pet.MakeNoise()}");
+    }
 }
-// names.Add("Diana");
-// names.Add("Eve");
-// names.Remove("Cziczi");
-// names[0] = "Mija";
-// System.Console.WriteLine(names[2]);
-// System.Console.WriteLine(names[0]);
-// System.Console.WriteLine(names[^2]);
-// System.Console.WriteLine(names.Count);
-// System.Console.WriteLine(names.Count - 1);
+
+public class Person
+{
+    public Person(string firstName, string lastName, DateOnly birthDate)
+    {
+        First = firstName;
+        Last = lastName;
+        BirthDate = birthDate;
+        Pets = new List<Pet>();
+    }
+
+    public string First { get; }
+    public string Last { get; }
+    public DateOnly BirthDate { get; }
+    public List<Pet> Pets { get; }
+}
+
+public abstract class Pet
+{
+    protected Pet(string firstName)
+    {
+        First = firstName;
+    }
+
+    public string First { get; }
+    public abstract string MakeNoise();
+}
+
+public class Cat : Pet
+{
+    public Cat(string firstName) : base(firstName) { }
+
+    public override string MakeNoise() => "Meow!";
+}
+
+public class Dog : Pet
+{
+    public Dog(string firstName) : base(firstName)
+    {
+    }
+
+    public override string MakeNoise() => "Woof!";
+}
+
