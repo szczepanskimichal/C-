@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentGrades", "StudentGra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex3", "Ex3\Ex3.csproj", "{5DA619A8-7D75-4FD6-AA1D-978871302944}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex4", "Ex4\Ex4.csproj", "{221F7F79-3C05-4FBD-B53E-12A721006BB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,18 @@ Global
 		{5DA619A8-7D75-4FD6-AA1D-978871302944}.Release|x64.Build.0 = Release|Any CPU
 		{5DA619A8-7D75-4FD6-AA1D-978871302944}.Release|x86.ActiveCfg = Release|Any CPU
 		{5DA619A8-7D75-4FD6-AA1D-978871302944}.Release|x86.Build.0 = Release|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Debug|x64.Build.0 = Debug|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Debug|x86.Build.0 = Debug|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Release|x64.ActiveCfg = Release|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Release|x64.Build.0 = Release|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Release|x86.ActiveCfg = Release|Any CPU
+		{221F7F79-3C05-4FBD-B53E-12A721006BB7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
