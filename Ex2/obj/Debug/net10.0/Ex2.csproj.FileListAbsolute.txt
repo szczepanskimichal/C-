@@ -1,0 +1,15 @@
+/Users/michalszczepanski/RiderProjects/backend/Ex2/bin/Debug/net10.0/Ex2
+/Users/michalszczepanski/RiderProjects/backend/Ex2/bin/Debug/net10.0/Ex2.deps.json
+/Users/michalszczepanski/RiderProjects/backend/Ex2/bin/Debug/net10.0/Ex2.runtimeconfig.json
+/Users/michalszczepanski/RiderProjects/backend/Ex2/bin/Debug/net10.0/Ex2.dll
+/Users/michalszczepanski/RiderProjects/backend/Ex2/bin/Debug/net10.0/Ex2.pdb
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/Ex2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/Ex2.AssemblyInfoInputs.cache
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/Ex2.AssemblyInfo.cs
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/Ex2.csproj.CoreCompileInputs.cache
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/Ex2.sourcelink.json
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/Ex2.dll
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/refint/Ex2.dll
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/Ex2.pdb
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/Ex2.genruntimeconfig.cache
+/Users/michalszczepanski/RiderProjects/backend/Ex2/obj/Debug/net10.0/ref/Ex2.dll
