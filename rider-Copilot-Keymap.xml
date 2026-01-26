@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Keymap wzorowany na skrótach VS Code (dla macOS) — importuj przez Preferences -> Keymap -> Import Keymap...
+  Co robi (wybrane mapowania):
+    - Toggle line comment: Command + /  (⌘/) oraz alternatywnie Command+7 (⌘7)
+    - Quick Fix / Show Intention Actions: Command + . (⌘.)  (VS Code: Quick Fix)
+    - Rename (refactor): F2
+    - Go to Definition: F12
+    - Find References / Find Usages: Shift + F12
+    - Format Document / Reformat Code: Shift + Alt + F (⇧⌥F)
+
+  Po imporcie: jeśli coś koliduje, otwórz Preferences -> Keymap i dostosuj konkretne akcje.
+-->
+<keymap version="1" name="VSCode-like Keymap for Rider" parent="Mac OS X">
+  <!-- Toggle line comment (VSCode: Cmd+/) -->
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="meta SLASH"/>
+    <keyboard-shortcut first-keystroke="meta 7"/>
+  </action>
+
+  <!-- Quick Fix / Show Intentions (VSCode: Cmd+.) -->
+  <action id="ShowIntentionActions">
+    <keyboard-shortcut first-keystroke="meta PERIOD"/>
+  </action>
+
+  <!-- Rename (Refactor) (VSCode: F2) -->
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="F2"/>
+  </action>
+
+  <!-- Go to Declaration / Definition (VSCode: F12) -->
+  <action id="GotoDeclaration">
+    <keyboard-shortcut first-keystroke="F12"/>
+  </action>
+
+  <!-- Find Usages / References (VSCode: Shift+F12) -->
+  <action id="FindUsages">
+    <keyboard-shortcut first-keystroke="shift F12"/>
+  </action>
+
+  <!-- Reformat code / Format document (VSCode: Shift+Alt+F) -->
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="shift alt F"/>
+  </action>
+
+  <!-- Optional: przypisz Copilot Chat otwieranie (jeśli pojawi się w Keymap po instalacji pluginu) -->
+  <!-- Po zainstalowaniu Copilot: wyszukaj akcję "Open Copilot Chat" lub podobną i przypisz skrót, np. ctrl alt C -->
+</keymap>
