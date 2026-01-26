@@ -13,3 +13,11 @@
 /Users/michalszczepanski/Documents/GitHub/backend/C#/01/obj/Debug/net10.0/01.pdb
 /Users/michalszczepanski/Documents/GitHub/backend/C#/01/obj/Debug/net10.0/01.genruntimeconfig.cache
 /Users/michalszczepanski/Documents/GitHub/backend/C#/01/obj/Debug/net10.0/ref/01.dll
+/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/Debug/net10.0/01.GeneratedMSBuildEditorConfig.editorconfig
+/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/Debug/net10.0/01.AssemblyInfoInputs.cache
+/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/Debug/net10.0/01.AssemblyInfo.cs
+/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/Debug/net10.0/01.csproj.CoreCompileInputs.cache
+/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/Debug/net10.0/01.sourcelink.json
+/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/Debug/net10.0/01.dll
+/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/Debug/net10.0/refint/01.dll
+/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/Debug/net10.0/01.pdb

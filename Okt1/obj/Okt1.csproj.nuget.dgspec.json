@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michalszczepanski/Documents/GitHub/backend/Okt1/Okt1.csproj": {}
+    "/Users/michalszczepanski/RiderProjects/backend/Okt1/Okt1.csproj": {}
   },
   "projects": {
-    "/Users/michalszczepanski/Documents/GitHub/backend/Okt1/Okt1.csproj": {
+    "/Users/michalszczepanski/RiderProjects/backend/Okt1/Okt1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michalszczepanski/Documents/GitHub/backend/Okt1/Okt1.csproj",
+        "projectUniqueName": "/Users/michalszczepanski/RiderProjects/backend/Okt1/Okt1.csproj",
         "projectName": "Okt1",
-        "projectPath": "/Users/michalszczepanski/Documents/GitHub/backend/Okt1/Okt1.csproj",
+        "projectPath": "/Users/michalszczepanski/RiderProjects/backend/Okt1/Okt1.csproj",
         "packagesPath": "/Users/michalszczepanski/.nuget/packages/",
-        "outputPath": "/Users/michalszczepanski/Documents/GitHub/backend/Okt1/obj/",
+        "outputPath": "/Users/michalszczepanski/RiderProjects/backend/Okt1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/michalszczepanski/.nuget/NuGet/NuGet.Config"
