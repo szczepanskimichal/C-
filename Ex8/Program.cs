@@ -47,7 +47,9 @@ Console.ReadLine();*/
 
 //int[] sophiaScores = new int[5];
 
-int currentAssignments = 5;
+int examAssignments = 5;
+// Student names
+string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
 
 // initialize variables - graded assignments 
 int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
@@ -59,25 +61,21 @@ int[] chrisScores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
 int[] ericScores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
 int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 };    
 
-// Student names
-string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
 
 int[] studentScores = new int[10];
 string currentStudentLetterGrade = "";
-Console.WriteLine("Student\t\tGrade\n");
+//Console.WriteLine("Student\t\tGrade\n");
+Console.Clear();
+Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
 foreach (string name in studentNames)
 {
     string currentStudent = name;
-
     if (currentStudent == "Sophia")
         studentScores = sophiaScores;
-
     else if (currentStudent == "Andrew")
         studentScores = andrewScores;
-
     else if (currentStudent == "Emma")
         studentScores = emmaScores;
-
     else if (currentStudent == "Logan")
        studentScores = loganScores;
     else if (currentStudent == "Becky") 
@@ -91,24 +89,37 @@ foreach (string name in studentNames)
     //continue;
 
     // initialize/reset the sum of scored assignments
-    int sumAssignmentScores = 0;
     int gradeAssignments = 0;
+    int gradeExtraCreditAssignments = 0;
+    int sumExamScores= 0;
+    int sumExtraCreditScores = 0;
     // initialize/reset the calculated average of exam + extra credit scores
     decimal currentStudentGrade = 0;
+    decimal currentStudentExamScore = 0;
+    decimal currentStudentGradeExtraCredit = 0;
 
     foreach (int score in studentScores)
     {
         gradeAssignments += 1; //increment the number of graded assignments
-        if (gradeAssignments <= currentAssignments)
+        if (gradeAssignments <= examAssignments)
+        {
             // add the exam score to the sum
-            sumAssignmentScores += score;
+            sumExamScores = sumExamScores + score;
+        }
         else
-            sumAssignmentScores += score / 10; // extra credit assignments are worth 10% of a regular assignment
+        {
+            gradeExtraCreditAssignments += 1; //increment the number of extra credit assignments
+            sumExtraCreditScores+= score; // add the extra credit score to the sum
+        }
+          
     }
 
 
-    currentStudentGrade = (decimal)(sumAssignmentScores) / currentAssignments;
-
+    currentStudentGrade = (decimal)(sumExamScores) / examAssignments;
+    currentStudentGradeExtraCredit=(decimal)sumExtraCreditScores/gradeExtraCreditAssignments;
+    
+    currentStudentGrade = (decimal)((decimal)sumExamScores + ((decimal)sumExtraCreditScores / 10)) / examAssignments;    
+    
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
 
@@ -149,7 +160,7 @@ foreach (string name in studentNames)
         currentStudentLetterGrade = "F";
 
     //Console.WriteLine($"{name}\t\t{currentStudentGrade}\t?");
-Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+Console.WriteLine($"{currentStudent}\t\t{currentStudentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{currentStudentGradeExtraCredit} ({((decimal)sumExtraCreditScores/10)/ examAssignments}");
 } 
 Console.WriteLine("\n\rPress the Enter key to continue");
 Console.ReadLine();
