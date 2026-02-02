@@ -1,0 +1,1 @@
+﻿var connectionString = "Data Source=naiv_teller.db";
