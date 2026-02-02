@@ -84,8 +84,8 @@ for (int i = 0; i < maxPets; i++)
     ourAnimals[i, 5] = "Personality: " + animalPersonalityDescription;
 }
 
-// display the top-level menu options
-
+do
+{
 Console.Clear();
 
 Console.WriteLine("Welcome to the Contoso PetFriends app. Your main menu options are:");
@@ -105,9 +105,106 @@ if (readResult != null)
 {
     menuSelection = readResult.ToLower();
 }
-
+/*
 Console.WriteLine($"You selected menu option {menuSelection}.");
 Console.WriteLine("Press the Enter key to continue");
 
 // pause code execution
 readResult = Console.ReadLine();
+  */
+    switch (menuSelection)
+    {
+        case "1":
+            for (int i = 0; i < maxPets; i++)
+            {
+                if(ourAnimals[i,0] != "ID #: ")
+                {
+                    Console.WriteLine();
+                    for (int j = 0; j < 6; j++)
+                    {
+                        Console.WriteLine(ourAnimals[i, j]);
+                    }
+                }
+                
+            }
+            // List all of our current pet information
+           //Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            //Console.WriteLine("Press the Enter key to continue.");
+            Console.WriteLine("\n\rPress the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+        case "2":
+            // Add a new animal friend to the ourAnimals array
+            string anotherPet = "y";
+            int petCount = 0;
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] != "ID #: ")
+                {
+                    petCount += 1;
+                }
+            }
+            if (petCount < maxPets)
+            {
+                Console.WriteLine($"We currently have {petCount} pets that need homes. We can manage {(maxPets - petCount)} more.");
+            }
+
+            while (anotherPet == "y" && petCount < maxPets)
+            {
+            petCount = petCount + 1;     // increment petCount (the array is zero-based, so we increment the counter after adding to the array)
+
+            if(petCount < maxPets)
+                //anotherPet ?
+                Console.WriteLine("Do you want to enter info for another pet (y/n)");
+            do
+            {
+                readResult = Console.ReadLine();
+                if (readResult != null)
+                {
+                    anotherPet = readResult.ToLower();
+                }
+            } while (anotherPet != "y" && anotherPet != "n");
+            }
+
+            if (petCount >= maxPets)
+            {
+                Console.WriteLine("We have reached our limit on the number of pets that we can manage.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+            }
+            
+            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+
+        case "3":
+            Console.WriteLine("Challenge Project - please check back soon to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+
+        case "4":
+            break;
+
+        case "5":
+            break;
+
+        case "6":
+            
+            break;
+
+        case "7":
+            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+
+        case "8":
+            break;
+        default:
+            break;
+    }
+} while (menuSelection != "exit");
+// display the top-level menu options
+
