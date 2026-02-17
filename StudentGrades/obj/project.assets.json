@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/michalszczepanski/RiderProjects/backend/StudentGrades/StudentGrades.csproj",
+      "projectUniqueName": "/Users/michalszczepanski/Documents/GitHub/backend/StudentGrades/StudentGrades.csproj",
       "projectName": "StudentGrades",
-      "projectPath": "/Users/michalszczepanski/RiderProjects/backend/StudentGrades/StudentGrades.csproj",
+      "projectPath": "/Users/michalszczepanski/Documents/GitHub/backend/StudentGrades/StudentGrades.csproj",
       "packagesPath": "/Users/michalszczepanski/.nuget/packages/",
-      "outputPath": "/Users/michalszczepanski/RiderProjects/backend/StudentGrades/obj/",
+      "outputPath": "/Users/michalszczepanski/Documents/GitHub/backend/StudentGrades/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/michalszczepanski/.nuget/NuGet/NuGet.Config"

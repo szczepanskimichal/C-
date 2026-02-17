@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michalszczepanski/RiderProjects/backend/C#/01/01.csproj": {}
+    "/Users/michalszczepanski/Documents/GitHub/backend/C#/01/01.csproj": {}
   },
   "projects": {
-    "/Users/michalszczepanski/RiderProjects/backend/C#/01/01.csproj": {
+    "/Users/michalszczepanski/Documents/GitHub/backend/C#/01/01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michalszczepanski/RiderProjects/backend/C#/01/01.csproj",
+        "projectUniqueName": "/Users/michalszczepanski/Documents/GitHub/backend/C#/01/01.csproj",
         "projectName": "01",
-        "projectPath": "/Users/michalszczepanski/RiderProjects/backend/C#/01/01.csproj",
+        "projectPath": "/Users/michalszczepanski/Documents/GitHub/backend/C#/01/01.csproj",
         "packagesPath": "/Users/michalszczepanski/.nuget/packages/",
-        "outputPath": "/Users/michalszczepanski/RiderProjects/backend/C#/01/obj/",
+        "outputPath": "/Users/michalszczepanski/Documents/GitHub/backend/C#/01/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/michalszczepanski/.nuget/NuGet/NuGet.Config"
