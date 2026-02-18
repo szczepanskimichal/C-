@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kodeProsjekt3Vol3", "kodePr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebbAppVol2", "MyWebbAppVol2\MyWebbAppVol2.csproj", "{404D4237-A07C-420C-A426-5A5AB965E623}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppVol3", "WebAppVol3\WebAppVol3.csproj", "{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -337,6 +339,18 @@ Global
 		{404D4237-A07C-420C-A426-5A5AB965E623}.Release|x64.Build.0 = Release|Any CPU
 		{404D4237-A07C-420C-A426-5A5AB965E623}.Release|x86.ActiveCfg = Release|Any CPU
 		{404D4237-A07C-420C-A426-5A5AB965E623}.Release|x86.Build.0 = Release|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Debug|x64.Build.0 = Debug|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Debug|x86.Build.0 = Debug|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Release|x64.ActiveCfg = Release|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Release|x64.Build.0 = Release|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{88083CE8-DFD2-4F0A-881B-6C39A02E22F9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
