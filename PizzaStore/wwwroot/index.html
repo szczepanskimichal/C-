@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PizzaStore Test</title>
+</head>
+<body>
+  <h1>PizzaStore - Test POST</h1>
+  <form id="pizzaForm">
+    <label>Name: <input type="text" id="name" value="Pepperoni"/></label><br/>
+    <label>Description: <input type="text" id="description" value="A classic pepperoni pizza"/></label><br/>
+    <button type="submit">Send POST</button>
+  </form>
+  <hr />
+  <h2>Read</h2>
+  <button id="getAll">GET /pizzas (all)</button>
+  <form id="getByIdForm">
+    <label>Get by id: <input type="number" id="getId" value="1"/></label>
+    <button type="submit">GET</button>
+  </form>
+
+  <h2>Update (PUT)</h2>
+  <form id="putForm">
+    <label>Id: <input type="number" id="putId" value="1"/></label><br/>
+    <label>Name: <input type="text" id="putName" value="Pepperoni Updated"/></label><br/>
+    <label>Description: <input type="text" id="putDescription" value="Updated description"/></label><br/>
+    <button type="submit">Send PUT</button>
+  </form>
+
+  <h2>Delete</h2>
+  <form id="deleteForm">
+    <label>Id: <input type="number" id="deleteId" value="1"/></label>
+    <button type="submit">DELETE</button>
+  </form>
+
+  <pre id="result"></pre>
+
+  <script>
+    const form = document.getElementById('pizzaForm');
+    const result = document.getElementById('result');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const payload = {
+        name: document.getElementById('name').value,
+        description: document.getElementById('description').value
+      };
+      try {
+        const res = await fetch('/pizzas', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        result.textContent = JSON.stringify({ status: res.status, body: data }, null, 2);
+      } catch (err) {
+        result.textContent = 'Error: ' + err;
+      }
+    });
+
+    // GET all
+    document.getElementById('getAll').addEventListener('click', async () => {
+      try {
+        const res = await fetch('/pizzas');
+        const data = await res.json();
+        result.textContent = JSON.stringify({ status: res.status, body: data }, null, 2);
+      } catch (err) { result.textContent = 'Error: ' + err; }
+    });
+
+    // GET by id
+    document.getElementById('getByIdForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const id = document.getElementById('getId').value;
+      try {
+        const res = await fetch('/pizza/' + encodeURIComponent(id));
+        const contentType = res.headers.get('content-type') || '';
+        const body = contentType.includes('application/json') ? await res.json() : await res.text();
+        result.textContent = JSON.stringify({ status: res.status, body }, null, 2);
+      } catch (err) { result.textContent = 'Error: ' + err; }
+    });
+
+    // PUT update
+    document.getElementById('putForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const id = document.getElementById('putId').value;
+      const payload = {
+        name: document.getElementById('putName').value,
+        description: document.getElementById('putDescription').value
+      };
+      try {
+        const res = await fetch('/pizza/' + encodeURIComponent(id), {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        result.textContent = JSON.stringify({ status: res.status }, null, 2);
+      } catch (err) { result.textContent = 'Error: ' + err; }
+    });
+
+    // DELETE
+    document.getElementById('deleteForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const id = document.getElementById('deleteId').value;
+      try {
+        const res = await fetch('/pizza/' + encodeURIComponent(id), { method: 'DELETE' });
+        result.textContent = JSON.stringify({ status: res.status }, null, 2);
+      } catch (err) { result.textContent = 'Error: ' + err; }
+    });
+
+    // Auto-fetch all pizzas on page load
+    window.addEventListener('load', () => document.getElementById('getAll').click());
+  </script>
+</body>
+</html>

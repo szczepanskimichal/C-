@@ -9,9 +9,10 @@ namespace PizzaStore.Models
     public string? Description { get; set; }
   }
 
-  class PizzaDb : DbContext
+  // session to DB
+  public class PizzaDb : DbContext
   {
-    public PizzaDb(DbContextOptions options) : base(options) { }
+    public PizzaDb(DbContextOptions<PizzaDb> options) : base(options) { }
     public DbSet<Pizza> Pizzas { get; set; } = null!;
   }
 }
