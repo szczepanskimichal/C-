@@ -4,7 +4,11 @@ using PizzaStore.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 //EFCORE - In-Memory DB
-builder.Services.AddDbContext<PizzaDb>(options => options.UseInMemoryDatabase("items"));
+//builder.Services.AddDbContext<PizzaDb>(options => options.UseInMemoryDatabase("items"));
+//SQLite DB
+builder.Services.AddDbContext<PizzaDb>(options =>
+  options.UseSqlite(builder.Configuration.GetConnectionString("PizzaDb"))
+);
 //SWAGGER/OPENAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -19,18 +23,30 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 //SWagger only in development
+// tworzy plik pizzastore.db + tabelę Pizzas przy starcie aplikacji
+using (var scope = app.Services.CreateScope())
+{
+  var db = scope.ServiceProvider.GetRequiredService<PizzaDb>();
+  // Print the SQL script EF Core would run to create the schema
+  try
+  {
+    var script = db.Database.GenerateCreateScript();
+    Console.WriteLine("---- EF Core Generated CREATE SCRIPT ----\n" + script + "\n---- end script ----");
+  }
+  catch (Exception ex)
+  {
+    Console.WriteLine("Could not generate create script: " + ex.Message);
+  }
+  // Ensure database and tables exist (creates DB file and tables if missing)
+  db.Database.EnsureCreated();
+}
+
 if (app.Environment.IsDevelopment())
 {
   app.UseSwagger();
-  app.UseSwaggerUI(c =>
-  {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PizzaStore API v1");
-  });
+  app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PizzaStore API v1"));
 }
-// Serve static files from wwwroot (for a simple HTML test page)
-app.UseDefaultFiles();
-app.UseStaticFiles();
-//GET ALL!!!
+
 app.MapGet("/pizzas", async (PizzaDb db) => await db.Pizzas.ToListAsync());
 //app.MapGet("/", () => "Hello World!");
 //POST CREATE PIZZA
