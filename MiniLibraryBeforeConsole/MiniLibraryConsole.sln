@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniLibraryBeforeConsole", "MiniLibraryBeforeConsole\MiniLibraryBeforeConsole.csproj", "{4475046E-CC6C-4E90-B820-C4B60EA17DE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniLibraryAfterConsole", "MiniLibraryAfterConsole\MiniLibraryAfterConsole.csproj", "{94F36E75-6017-41AE-8CCA-7379CC917DB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniLibraryAfterCore", "MiniLibraryAfterCore\MiniLibraryAfterCore.csproj", "{50087642-6CEE-4B4B-9A02-F18EBF8BA30F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4475046E-CC6C-4E90-B820-C4B60EA17DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4475046E-CC6C-4E90-B820-C4B60EA17DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4475046E-CC6C-4E90-B820-C4B60EA17DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4475046E-CC6C-4E90-B820-C4B60EA17DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F36E75-6017-41AE-8CCA-7379CC917DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F36E75-6017-41AE-8CCA-7379CC917DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F36E75-6017-41AE-8CCA-7379CC917DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F36E75-6017-41AE-8CCA-7379CC917DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50087642-6CEE-4B4B-9A02-F18EBF8BA30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50087642-6CEE-4B4B-9A02-F18EBF8BA30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50087642-6CEE-4B4B-9A02-F18EBF8BA30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50087642-6CEE-4B4B-9A02-F18EBF8BA30F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

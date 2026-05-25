@@ -1,0 +1,18 @@
+namespace MiniLibraryAfterCore.DomainModel;
+
+public record BorrowerId
+{
+    public int Id { get; }
+
+    private BorrowerId(int id)
+    {
+        Id = id;
+    }
+
+    public static Result<BorrowerId> Create(string id)
+    {
+        return !int.TryParse(id, out var borrowerId)
+            ? Result<BorrowerId>.Failure("Invalid borrower id.")
+            : Result<BorrowerId>.Success(new BorrowerId(borrowerId));
+    }
+}
