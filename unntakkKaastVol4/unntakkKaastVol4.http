@@ -1,0 +1,6 @@
+@unntakkKaastVol4_HostAddress = http://localhost:5023
+
+GET {{unntakkKaastVol4_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

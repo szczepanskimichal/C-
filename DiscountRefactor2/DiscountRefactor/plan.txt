@@ -1,0 +1,4 @@
+1. Velg kun én ting du har lyst til å forbedre
+2. Lag en unit test som verifiserer at den ene tingen faktisk virker som den skal nå. 
+3. Refaktorer akkurat den ene tingen - og sjekk at unit testen fortsatt virker
+4. Gjenta - ikke gap over for mye på en gang!

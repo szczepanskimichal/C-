@@ -1,0 +1,6 @@
+@ApiWithException_HostAddress = http://localhost:5188
+
+GET {{ApiWithException_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

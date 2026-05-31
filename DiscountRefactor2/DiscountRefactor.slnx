@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ApiWithException/ApiWithException.csproj" Id="089408d0-35bb-4360-9975-89eb32e562ef" />
+  <Project Path="DiscountRefactor.Test/DiscountRefactor.Test.csproj" />
+  <Project Path="DiscountRefactor/DiscountRefactor.csproj" />
+</Solution>
