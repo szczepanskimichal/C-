@@ -40,3 +40,5 @@ public class Logic2
         FormatAmount = amount => $"{amount:0.00} kr";
     }
 }
+
+//lkdnsakdns
